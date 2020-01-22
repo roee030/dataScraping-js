@@ -18,6 +18,14 @@ oReq.onload = function(e) {
   var first_sheet_name = workbook.SheetNames[0];
   /* Get worksheet */
   var worksheet = workbook.Sheets[first_sheet_name];
-  console.log(XLSX.utils.sheet_to_json(worksheet,{raw:true}));
+  //console.log(XLSX.utils.sheet_to_json(worksheet,{raw:true}));
+  var dataobject = XLSX.utils.sheet_to_json(worksheet,{raw:true})
+  dataobject.forEach(element => {
+    data = JSON.stringify(element);
+    console.log(typeof(data));
+    
+    
+  });
+  
 }
 oReq.send();
