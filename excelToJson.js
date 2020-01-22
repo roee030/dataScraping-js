@@ -1,5 +1,5 @@
 /* set up XMLHttpRequest */
-var url = "/exelFile.xlsx";
+var url = "/excelFile.xlsx";
 var oReq = new XMLHttpRequest();
 oReq.open("GET", url, true);
 oReq.responseType = "arraybuffer";
@@ -21,5 +21,3 @@ oReq.onload = function(e) {
   console.log(XLSX.utils.sheet_to_json(worksheet,{raw:true}));
 }
 oReq.send();
-
-export default exelToJson;
