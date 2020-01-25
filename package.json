@@ -17,6 +17,13 @@
   },
   "homepage": "https://github.com/roee030/dataScraping-js#readme",
   "dependencies": {
-    "ajax": "0.0.4"
+    "ajax": "0.0.4",
+    "csv-parser": "^2.3.2",
+    "excel": "^1.0.1",
+    "express": "^4.17.1",
+    "papaparse": "^5.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
