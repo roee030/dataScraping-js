@@ -7,8 +7,12 @@ const data = [];
 app.get('/', (req, res) => {
     for(var i = 0 ; i < Object.keys(results.results.results).length ; i++)
     {
-        data.push(results.results.results[i]["title"])
-    }
+        data.push(results.results.results[i]["title"]),
+        data.push(results.results.results[i]["description"].split('.')[0]),
+        data.push(results.results.results[i]["link"])
+       
+        
+        }
   res.send(data)
 })
 
