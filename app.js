@@ -5,9 +5,7 @@ const results = require('./excelToJson')
 const data = [];
 
 app.get('/', (req, res) => {
-    
-    
-    for(var i = 0 ; i < 50 ; i++)
+    for(var i = 0 ; i < Object.keys(results.results.results).length ; i++)
     {
         data.push(results.results.results[i]["title"])
     }
