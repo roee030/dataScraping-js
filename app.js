@@ -10,12 +10,9 @@ app.get('/', (req, res) => {
     {
       data.push(results.results.results[i]["title"]+" $$ "),
       data.push(results.results.results[i]["description"].split('.')[0] +" $$ "),
-      data.push(results.results.results[i]["link"]+'?r=aV3j1Mz'+" $$ ")
-
+      data.push(  results.results.results[i]["link"].replace('/r/','/')+'?r=aV3j1Mz'+" $$ ")
     }
-
   var x = fun(data)
   res.send(x)
 })
-
 app.listen(port, () => console.log(`app listening on port ${port}!`))
